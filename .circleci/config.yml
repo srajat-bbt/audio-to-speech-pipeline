@@ -22,7 +22,7 @@ jobs:
       env_name:
         type: string
     machine:
-      image: ubuntu-1604:201903-01
+      image: ubuntu-2004:2022.07.1
     working_directory: ~/project/packages/pipeline_workflows
     steps:
       - checkout:
@@ -130,7 +130,7 @@ jobs:
         type: string
     #    executor: node
     machine:
-      image: ubuntu-1604:201903-01
+      image: ubuntu-2004:2022.07.1
     working_directory: ~/project/packages
 
     steps:
