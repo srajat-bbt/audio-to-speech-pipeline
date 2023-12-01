@@ -1,9 +1,9 @@
 python_setup:
-	pyenv install 3.7.7
-	pyenv local 3.7.7
+	pyenv install 3.11.6
+	pyenv local 3.11.6
 	eval "$(pyenv init -)"
 	python --version ; pip --version
-	python -m pip install pip==20.0.2
+	python -m pip install pip
 
 clean:
 	rm -rf .workspace
