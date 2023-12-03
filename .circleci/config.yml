@@ -277,18 +277,18 @@ workflows:
       #     package_version: 1.0.0
       #     requires:
       #       - ekstep_data_pipelines_build
-      - deploy-db:
-          name: ekstep-database-migrations-apply-test
-          mode: 'apply'
-          env_name: 'test'
-          requires:
-            - ekstep_data_pipelines_build
+      # - deploy-db:
+      #     name: ekstep-database-migrations-apply-test
+      #     mode: 'apply'
+      #     env_name: 'test'
+      #     requires:
+      #       - ekstep_data_pipelines_build
       - build-dags:
           name: pipeline-dag-build_test
           package_name: pipeline_workflows
           env_name: 'test'
           requires:
-            - ekstep-database-migrations-apply-test
+            - ekstep_data_pipelines_build
       - E2E:
           name: ekstep_data_pipelines_e2e_build
           requires:
