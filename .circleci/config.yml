@@ -154,7 +154,7 @@ jobs:
              echo "Tag ekstep_data_pipelines ... with << parameters.env_name >>"
              docker tag ${DOCKER_REPO_LOCATION}-docker.pkg.dev/${GCP_PROJECT}/${DOCKER_REPO}/ekstep_data_pipelines:<< parameters.package_version >> ${DOCKER_REPO_LOCATION}-docker.pkg.dev/${GCP_PROJECT}/${DOCKER_REPO}/ekstep_data_pipelines:<< parameters.env_name >>_<< parameters.package_version >>
             fi
-            gcloud docker -- push ${DOCKER_REPO_LOCATION}-docker.pkg.dev/${GCP_PROJECT}/${DOCKER_REPO}/ekstep_data_pipelines
+            # gcloud docker -- push ${DOCKER_REPO_LOCATION}-docker.pkg.dev/${GCP_PROJECT}/${DOCKER_REPO}/ekstep_data_pipelines
       - run:
           name: Remove account details
           command: rm ${HOME}/gcp-key.json ; ls
